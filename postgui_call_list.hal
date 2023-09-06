@@ -4,5 +4,5 @@
 # overwritten when you run stepconf again
 
 source custom_postgui.hal
-source time.hal
-source spindle_load.hal
+#source time.hal
+#source spindle_load.hal
