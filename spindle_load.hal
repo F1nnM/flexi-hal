@@ -1,6 +1,7 @@
 #probe_basic spindle load indicator
 
-	net spindle-load vfdmod.parameters.vfd-output-current => qtpyvcp.spindle-load-indicator.in-f
+#hy_vfd - uncomment the below if using hy_vfd
+net spindle-load vfd.OutA => qtpyvcp.spindle-load-indicator.in-f
     
-    #set this to max current of spindle. Will be shown as reported current/max-val
-	setp qtpyvcp.spindle-load-indicator.max-val 10
+#set this to max current of spindle. Will be shown as reported current/max-val
+setp qtpyvcp.spindle-load-indicator.max-val 8
