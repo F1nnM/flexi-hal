@@ -79,9 +79,9 @@ net j1pos-cmd joint.1.motor-pos-cmd => flexi.joint.1.pos-cmd
 net j1pos-fb flexi.joint.1.pos-fb => joint.1.motor-pos-fb 
 net j1enable joint.1.amp-enable-out => flexi.joint.1.enable
 
-net y-home joint.1.home-sw-in => flexi.input.Y_LIMIT
+net y1-home joint.1.home-sw-in => flexi.input.Y_LIMIT
 
-# Joint 2 setup - Z
+# Joint 2 setup - Y2
 
 setp flexi.joint.2.scale [JOINT_2]SCALE
 setp flexi.joint.2.maxaccel [JOINT_2]STEPGEN_MAXACCEL
@@ -93,9 +93,10 @@ net j2pos-cmd joint.2.motor-pos-cmd => flexi.joint.2.pos-cmd
 net j2pos-fb flexi.joint.2.pos-fb => joint.2.motor-pos-fb
 net j2enable joint.2.amp-enable-out => flexi.joint.2.enable
 
-net z-home joint.2.home-sw-in => flexi.input.Z_LIMIT
+net y2-home joint.2.home-sw-in => flexi.input.Z_LIMIT
 
-# Joint 3 setup - Y2
+
+# Joint 3 setup - Z
 
 setp flexi.joint.3.scale [JOINT_3]SCALE
 setp flexi.joint.3.maxaccel [JOINT_3]STEPGEN_MAXACCEL
@@ -106,6 +107,8 @@ setp flexi.joint.3.deadband [JOINT_3]DEADBAND
 net j3pos-cmd joint.3.motor-pos-cmd => flexi.joint.3.pos-cmd
 net j3pos-fb flexi.joint.3.pos-fb => joint.3.motor-pos-fb
 net j3enable joint.3.amp-enable-out => flexi.joint.3.enable
+
+net z-home joint.3.home-sw-in => flexi.input.A_LIMIT
 
 # Motor enables
 
